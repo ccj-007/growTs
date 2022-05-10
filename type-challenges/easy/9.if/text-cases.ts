@@ -7,3 +7,5 @@ type cases = [
 
 // @ts-expect-error
 type error = If<null, 'a', 'b'>
+
+//null在严格模式下算false， 非严格模式是true
