@@ -1,5 +1,5 @@
-type MyReadonly2<T, K> = {
-  [K in keyof T]: K
+type MyReadonly<T, K> = {
+  readonly [K in keyof T]: T[K]
 }
 
 //如何遍历一个对象，那么对应如何只读对应的key，就需要不断的遍历。
