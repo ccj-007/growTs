@@ -10,6 +10,7 @@ type LengthOfString2<S extends string, A extends any[] = []> = S extends `${infe
 //通过递归不断推入A，那么A['length']一直在变化
 
 
+type LengthOfString3<S extends string, A extends any[] = []> = S extends `${infer L}${infer R}` ? LengthOfString<R, [...A, L]> : A['length']
 
 
 
