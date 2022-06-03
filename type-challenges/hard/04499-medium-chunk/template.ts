@@ -5,4 +5,3 @@ type Chunk<T extends any[], N extends number, Swap extends any[] = []> = Swap['l
     : Swap extends [] ? Swap : [Swap]
 
   //Swap['length'] extends N  代表数组的分割长度
-  //
