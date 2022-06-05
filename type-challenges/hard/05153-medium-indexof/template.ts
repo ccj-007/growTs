@@ -1,1 +1,1 @@
-type IndexOf<T, U> = any
+type IndexOf<T, U, Index extends any[] = []> = T extends [infer V, ...infer Rest] ? V extends U ? Index['length'] : IndexOf<Rest,U,[...Index,0]> : -1
